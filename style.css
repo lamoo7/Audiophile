@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#hero {
+  height: 100vh;
+  background-image: url("images/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+#hero header {
+  width: 80%;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid #616161;
+}
+#hero header > a:first-child {
+  display: grid;
+  place-content: center;
+}
+#hero header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+#hero header nav ul li a {
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-inline: 16px;
+  text-decoration: none;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+#hero header nav ul li a:hover {
+  color: #D87D4A;
+}
+#hero header button {
+  all: unset;
+  cursor: pointer;
+}
+#hero .title {
+  width: 398px;
+  position: absolute;
+  left: 165px;
+  top: 225px;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+#hero .title h2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+}
+#hero .title h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+#hero .title p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: none;
+}
+#hero .title button {
+  background-color: #D87D4A;
+  width: 160px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+#items-wrapper {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#items-wrapper .item {
+  background: #f1f1f1;
+  width: 360px;
+  height: 254px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+#items-wrapper .item:hover span {
+  animation: shop 600ms alternate 1 ease;
+}
+#items-wrapper .item img {
+  width: 130px;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#items-wrapper .item:last-child img {
+  top: -25%;
+}
+#items-wrapper .item div {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+}
+#items-wrapper .item div .category {
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #000;
+}
+#items-wrapper .item div p {
+  color: #000;
+}
+#items-wrapper .item div p span {
+  color: #D87D4A;
+  font-weight: 900;
+  margin-left: 10px;
+  zoom: 1.35;
+}
+
+#orange-section {
+  margin-top: 50px;
+  border-radius: 10px;
+  background: #D87D4A;
+  width: 1180px;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+#orange-section img {
+  width: 410px;
+  height: 493px;
+  margin-bottom: -120px;
+}
+#orange-section .content {
+  display: flex;
+  flex-direction: column;
+}
+#orange-section .content h1 {
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#orange-section .content p {
+  width: 349px;
+  color: #FFF;
+  font-size: 15px;
+  text-transform: none;
+}
+#orange-section .content button {
+  width: 160px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #000;
+  color: #FFF;
+}
+
+#gray-section {
+  margin-top: 50px;
+  width: 1110px;
+  height: 320px;
+  border-radius: 10px;
+  background-image: url("images/image-speaker-zx7.jpg");
+  float: right;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#gray-section h1 {
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  color: #000;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#gray-section button {
+  background: transparent;
+  border: #000 2px solid;
+  width: 160px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@keyframes shop {
+  50% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

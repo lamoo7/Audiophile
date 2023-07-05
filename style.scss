@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+@mixin font{
+    font-family: Manrope;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+@mixin buton {
+    width: 160px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#hero{
+    height: 100vh;
+    background-image: url("images/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    header{
+        width: 80%;
+        height: min-content;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        border-bottom: 2px solid #616161;
+        & > a:first-child{
+            display: grid;
+            place-content: center;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            li a{
+                font-weight: 900;
+                letter-spacing: 3px;
+                margin-inline: 16px;
+                text-decoration: none;
+                @include font;
+                &:hover{ color: #D87D4A; }
+            }
+        }
+        button{
+            all: unset;
+            cursor: pointer;
+        }
+    }
+    .title {
+        width: 398px;
+        position: absolute;
+        left: 165px;
+        top: 225px;
+        @include font;
+        h2 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 10px;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 58px;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 25px;
+            text-transform: none;
+        }
+        button {
+            background-color: #D87D4A;
+            @include buton;
+            @include font;
+        }
+    }
+}
+
+#items-wrapper{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    .item{
+        background: #f1f1f1;
+        width: 360px;
+        height: 254px;      
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+        @include font;
+        &:hover span { animation: shop 600ms alternate 1 ease; }
+        img{
+            width: 130px;
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        &:last-child img {
+            top: -25%;
+        }
+        div{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            .category{
+                font-weight: 900;
+                letter-spacing: 2px;
+                color: #000;
+            }
+            p{
+                color: #000;
+                span{
+                    color: #D87D4A;
+                    font-weight: 900;
+                    margin-left: 10px;
+                    zoom: 1.35;
+                }
+            }
+        }
+    }
+}
+
+#orange-section{
+    margin-top: 50px;
+    border-radius: 10px;
+    background: #D87D4A;
+    width: 1180px;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    @include font;
+    img {
+        width: 410px;
+        height: 493px;
+        margin-bottom: -120px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-size: 64px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        p {
+            width: 349px;
+            color: #FFF;
+            font-size: 15px;
+            text-transform: none;
+        }
+        button {
+            @include buton;
+            background: #000;
+            color: #FFF;
+        }
+    }
+}
+
+#gray-section{
+    margin-top: 50px;
+    width: 1110px;
+    height: 320px;
+    border-radius: 10px;
+    background-image: url("images/image-speaker-zx7.jpg");
+    float: right;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{ 
+        @include font;
+        color: #000;
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    button{
+        background: transparent;
+        border: #000 2px solid;
+        @include buton;
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes shop {
+    50% { margin-left: 20px; }
+    100% { margin-left: 10px; }
+}
