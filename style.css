@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  display: grid;
 }
 
 #hero {
@@ -20,14 +21,16 @@ body {
   width: 80%;
   height: -moz-min-content;
   height: min-content;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
   padding: 16px;
   border-bottom: 2px solid #616161;
 }
 #hero header > a:first-child {
   display: grid;
   place-content: center;
+  justify-self: start;
 }
 #hero header nav ul {
   display: flex;
@@ -48,6 +51,8 @@ body {
 #hero header button {
   all: unset;
   cursor: pointer;
+  color: #f1f1f1;
+  justify-self: end;
 }
 #hero .title {
   width: 398px;
@@ -85,6 +90,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border: none;
   font-family: Manrope;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -143,6 +149,14 @@ body {
   zoom: 1.35;
 }
 
+@keyframes shop {
+  50% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
 #orange-section {
   margin-top: 50px;
   border-radius: 10px;
@@ -187,6 +201,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border: none;
   background: #000;
   color: #FFF;
 }
@@ -197,11 +212,11 @@ body {
   height: 320px;
   border-radius: 10px;
   background-image: url("images/image-speaker-zx7.jpg");
-  float: right;
   padding-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: end;
 }
 #gray-section h1 {
   font-family: Manrope;
@@ -214,8 +229,6 @@ body {
   text-transform: uppercase;
 }
 #gray-section button {
-  background: transparent;
-  border: #000 2px solid;
   width: 160px;
   height: 48px;
   cursor: pointer;
@@ -223,13 +236,137 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border: none;
+  background: transparent;
+  border: #000 2px solid;
 }
 
-@keyframes shop {
-  50% {
-    margin-left: 20px;
-  }
-  100% {
-    margin-left: 10px;
-  }
+#split-section-1 {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 50px;
+  justify-content: center;
+  justify-self: center;
+}
+#split-section-1 div, #split-section-1 img {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#split-section-1 div {
+  padding: 50px;
+}
+#split-section-1 h1 {
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  color: #000;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#split-section-1 button {
+  width: 160px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  border: #000 2px solid;
+}
+
+#split-section-2 {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 50px;
+  justify-content: center;
+  justify-self: center;
+}
+#split-section-2 h1 {
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  color: #000;
+  font-size: 35px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+}
+#split-section-2 h1 span {
+  color: #D87D4A;
+}
+#split-section-2 img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 540px;
+  border-radius: 10px;
+}
+#split-section-2 div {
+  display: grid;
+}
+
+p {
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-transform: initial;
+  color: #717171;
+  align-self: flex-start;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 50px 15vw 25px 15vw;
+  background-color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+}
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
+footer ul li a {
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-inline: 16px;
+  text-decoration: none;
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+footer ul li a:hover {
+  color: #D87D4A;
+}
+footer ul li i {
+  font-size: x-large;
+  align-self: flex-end;
+}
+footer p {
+  color: #888;
+}
+footer h4 {
+  font-family: Manrope;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+footer img {
+  align-self: center;
+}
+
+footer > *:nth-child(2n) {
+  justify-self: end;
 }/*# sourceMappingURL=style.css.map */

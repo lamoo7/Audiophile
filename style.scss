@@ -13,6 +13,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border: none;
 }
 
 *{
@@ -21,6 +22,7 @@
 body{
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 #hero{
@@ -33,13 +35,15 @@ body{
     header{
         width: 80%;
         height: min-content;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
         padding: 16px;
         border-bottom: 2px solid #616161;
         & > a:first-child{
             display: grid;
             place-content: center;
+            justify-self: start;
         }
         nav ul{
             display: flex;
@@ -56,6 +60,8 @@ body{
         button{
             all: unset;
             cursor: pointer;
+            color: #f1f1f1;
+            justify-self: end;
         }
     }
     .title {
@@ -139,6 +145,13 @@ body{
     }
 }
 
+
+@keyframes shop {
+    50% { margin-left: 20px; }
+    100% { margin-left: 10px; }
+}
+
+
 #orange-section{
     margin-top: 50px;
     border-radius: 10px;
@@ -185,11 +198,11 @@ body{
     height: 320px;
     border-radius: 10px;
     background-image: url("images/image-speaker-zx7.jpg");
-    float: right;
     padding-left: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-self: end;
     h1{ 
         @include font;
         color: #000;
@@ -199,21 +212,125 @@ body{
         text-transform: uppercase;
     }
     button{
+        @include buton;
         background: transparent;
         border: #000 2px solid;
-        @include buton;
     }
 }
 
+#split-section-1 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    gap: 50px;
+    justify-content: center;
+    justify-self: center;
+    
+    div, img {
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
+    div {
+        padding: 50px;
+    }
 
+    h1{ 
+        @include font;
+        color: #000;
+        font-size: 25px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    button{
+        @include buton;
+        background: transparent;
+        border: #000 2px solid;
+    }
+}
 
+#split-section-2 {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    gap: 50px;
+    justify-content: center;
+    justify-self: center;
 
+    h1{ 
+        @include font;
+        color: #000;
+        font-size: 35px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: fit-content;
+        align-self: flex-end;
 
+        span { color: #D87D4A; }
+    }
 
+    img {
+        object-fit: contain;
+        width: 540px;
+        border-radius: 10px;
+    }
 
+    div {
+        display: grid;
+    }
+}
 
-@keyframes shop {
-    50% { margin-left: 20px; }
-    100% { margin-left: 10px; }
+p {
+    @include font;
+    text-transform: initial;
+    color: #717171;
+    align-self: flex-start;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 50px 15vw 25px 15vw;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+
+    ul{
+        display: flex;
+        list-style-type: none;
+        li a{
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-inline: 16px;
+            text-decoration: none;
+            @include font;
+            &:hover{ color: #D87D4A; }
+        }
+
+        li i {
+            font-size: x-large;
+            align-self: flex-end;
+        }
+    }
+    
+    p {
+        color: #888;
+    }
+
+    h4 {
+        @include font;
+    }
+
+    img {
+        align-self: center;
+    }
+}
+
+footer > *:nth-child(2n) {
+    justify-self: end;
 }
